@@ -49,7 +49,6 @@ body
 #resume_page
 {
     width: 800px;
-    height: 800px;
     box-shadow: 0 30px 40px rgba(0,0,0,0.8);
     margin-left: auto;
     margin-right: auto;
@@ -58,6 +57,8 @@ body
     right: -900px;
     position: absolute;
     visibility: hidden;
+    
+
     margin-bottom: 100px;
 }
 
@@ -171,4 +172,5 @@ iframe
     width: 100%;
     height: 700px;
     border: none;
+    overflow-y: none;
 }
