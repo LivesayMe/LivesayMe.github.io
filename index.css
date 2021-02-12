@@ -43,7 +43,7 @@ body
     position: absolute;
     transition: .5s;
     right: 0px;
-
+    margin-bottom: 100px;
 }
 
 #resume_page
@@ -58,7 +58,7 @@ body
     right: -900px;
     position: absolute;
     visibility: hidden;
-
+    margin-bottom: 100px;
 }
 
 #contact_page
@@ -73,7 +73,7 @@ body
     transition: .5s;
     position: absolute;
     right: -900px;
-
+    margin-bottom: 100px;
 }
 
 #projects_page
@@ -88,6 +88,8 @@ body
     right: -900px;
     position: absolute;
     visibility: hidden;
+
+    margin-bottom: 100px;
 }
 
 #image-container
@@ -163,3 +165,10 @@ body
 }
 
 .nav_button:focus {outline:0;}
+
+iframe
+{
+    width: 100%;
+    height: 700px;
+    border: none;
+}
