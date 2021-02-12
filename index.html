@@ -1,0 +1,97 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html>
+    <head>
+        <title>Hunter Livesay EPortfolio</title>
+
+        <link rel="stylesheet" href="index.css">
+
+        <script>
+            var curPage = 0;
+            var pages = [];
+            function load_page(new_page)
+            {
+                if(new_page == curPage)
+                {
+                    return;
+                }
+
+                width = document.documentElement.clientWidth;
+                pages[new_page].style.display = "block";
+                pages[new_page].style.visibility = "visible";
+                pages[new_page].style.right = (width/2-400) + "px";
+                console.log(width);
+                
+                pages[curPage].style.display = "inline";
+                pages[curPage].style.right = width+800;
+
+
+                setTimeout(() => {  
+                    pages[curPage].style.visibility = "hidden";
+                    pages[curPage].style.display = "none";
+                    pages[curPage].style.right = -width-800;
+                    setTimeout(() => { pages[curPage].style.display = "block"; curPage = new_page;},50);
+                    
+            }, 500);
+            }
+
+            function init_document()
+            {
+                width = document.documentElement.clientWidth;
+                document.getElementById("home_page").style.right = (width/2-400) + "px";
+                pages.push(document.getElementById("home_page"));
+                pages.push(document.getElementById("resume_page"));
+                pages.push(document.getElementById("projects_page"));
+                pages.push(document.getElementById("contact_page"));
+            }
+        </script>
+    </head>
+    
+    <body onload="init_document()">
+        <div id ="top_bar">
+            <span id="name_logo">Hunter Livesay</span>
+            <button class="nav_button" onclick = "load_page(0)">Home</button>
+            <button class="nav_button" onclick = "load_page(1)">Resume</button>
+            <button class="nav_button" onclick = "load_page(2)">Projects</button>
+        </div>
+
+        <div id="home_page">
+            <div id="image-container">
+                <img src="20201226_184603.jpg" style="object-fit: contain; width: 100%; height: 250px;"/>
+            </div>
+            
+            <div id="text-container">
+                Home Page       
+            </div>
+        </div>
+
+        <div id="resume_page">
+            <div id="image-container">
+                <img src="20201226_184603.jpg" style="object-fit: contain; width: 100%; height: 250px;"/>
+            </div>
+            
+            <div id="text-container">
+                Resume Page    
+            </div>
+        </div>
+
+        <div id="projects_page">
+            <div id="image-container">
+                <img src="20201226_184603.jpg" style="object-fit: contain; width: 100%; height: 250px;"/>
+            </div>
+            
+            <div id="text-container">
+                Projects Page
+            </div>
+        </div>
+
+        <div id="contact_page">
+            <div id="image-container">
+                <img src="20201226_184603.jpg" style="object-fit: contain; width: 100%; height: 250px;"/>
+            </div>
+            
+            <div id="text-container">
+                Contact Page   
+            </div>
+        </div>
+    </body>
+</html>
