@@ -27,7 +27,9 @@ body
     top: 30px;
     left: 50%;
     margin-left: -420px;
-    z-index: 3;
+    z-index: 100;
+
+    background-color: white;
 }
 
 #home_page
